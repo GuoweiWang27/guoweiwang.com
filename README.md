@@ -4,9 +4,10 @@
 
 ## 当前版本
 
-- `index.html`：Portfolio V4 初稿，主题为 “The Catalyst”。
+- `index.html`：Portfolio V5 工作版，主题为 “Catalyst Signature”。
 - `images/HeroPhoto.webp`：首屏优化图片。
 - `docs/portfolio-v4-plan.md`：V4 设计与内容计划。
+- `docs/portfolio-v5-catalyst-signature-plan.md`：V5 视觉签名实施方案。
 
 当前仍是单文件静态原型，页面内保留了上线前链接与素材 tracking，尚未部署。
 
@@ -26,4 +27,4 @@ python3 -m http.server 4173
 
 ## 来源
 
-V4 原稿保留在 `/Users/yimu/WorkBuddy/大米空间/`，本目录自此次迁移起作为工程真源。
+V4/V5 原稿与方案保留在 `/Users/yimu/WorkBuddy/大米空间/`，本目录自 V4 迁移起作为工程真源。

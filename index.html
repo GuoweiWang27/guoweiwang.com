@@ -159,6 +159,33 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
 .hero__title em {
   font-style: italic; color: var(--text-primary); font-weight: 600;
 }
+.hero__energy { margin: -0.5rem 0 2rem; max-width: 480px; }
+.hero__energy svg { width: 100%; height: auto; display: block; overflow: visible; }
+.ec-axis {
+  stroke: rgba(26, 26, 26, 0.16); stroke-width: 1; vector-effect: non-scaling-stroke;
+}
+.ec-raw, .ec-cat {
+  fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.ec-raw {
+  stroke: var(--text-muted); stroke-dasharray: 1000; stroke-dashoffset: 1000;
+  animation: ec-draw 0.85s var(--ease) 0.3s forwards;
+}
+.ec-cat {
+  stroke: var(--accent); stroke-dasharray: 1000; stroke-dashoffset: 1000;
+  animation: ec-draw 0.85s var(--ease) 0.55s forwards;
+}
+.ec-label {
+  font-family: var(--font-mono); font-size: 10px; fill: var(--text-muted);
+  font-style: italic;
+}
+.ec-label--cat { fill: var(--accent); }
+.hero__energy-caption {
+  font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-muted);
+  letter-spacing: 0.04em; margin-top: 0.25rem;
+}
+@keyframes ec-draw { to { stroke-dashoffset: 0; } }
 .hero__meta {
   font-family: var(--font-sans); font-size: 0.8125rem; color: var(--text-muted);
   margin-bottom: 2.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap;
@@ -312,6 +339,18 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
 .transition-quote {
   padding: 5rem 2rem; text-align: center; background: var(--bg-sand);
 }
+.transition-quote__eq {
+  font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em;
+  color: var(--sand-text); margin-bottom: 1.25rem;
+  display: flex; align-items: flex-end; justify-content: center;
+  gap: 0.5rem; flex-wrap: wrap;
+}
+.eq-arrow {
+  display: inline-flex; flex-direction: column; align-items: center;
+  min-width: 2.75rem; line-height: 1;
+}
+.eq-cat { font-size: 0.625rem; color: var(--accent); margin-bottom: 2px; }
+.eq-arrow__glyph { font-size: 0.9rem; }
 .transition-quote__text {
   font-family: var(--font-serif); font-style: italic;
   font-size: clamp(1.125rem, 2.5vw, 1.5rem); color: var(--text-primary);
@@ -597,6 +636,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
     transition-duration: 0.01ms !important;
   }
   .reveal { opacity: 1; transform: none; }
+  .ec-raw, .ec-cat { animation: none; stroke-dashoffset: 0; }
 }
 
 </style>
@@ -648,6 +688,16 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
       <p class="hero__title">
         I study <em>catalysts</em> &mdash; not just reactions, but change.
       </p>
+      <div class="hero__energy" aria-hidden="true">
+        <svg viewBox="0 0 480 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="ec-axis" d="M20 100 H460 M20 100 V14"/>
+          <path class="ec-raw" d="M20 78 C90 78 110 12 160 12 C210 12 240 84 300 84 H460"/>
+          <path class="ec-cat" d="M20 78 C90 78 130 44 180 44 C230 44 250 84 300 84 H460"/>
+          <text class="ec-label" x="160" y="8" text-anchor="middle">E<tspan baseline-shift="sub" font-size="8">a</tspan></text>
+          <text class="ec-label ec-label--cat" x="180" y="38" text-anchor="middle">E<tspan baseline-shift="sub" font-size="8">a</tspan>′</text>
+        </svg>
+        <p class="hero__energy-caption">Lowering the activation energy &mdash; in reactions and beyond.</p>
+      </div>
       <div class="hero__meta">
         <span>Beijing, China</span>
         <span>BFSU Affiliated High School</span>
@@ -798,6 +848,11 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
 
 <!-- TRANSITION -->
 <div class="transition-quote reveal">
+  <p class="transition-quote__eq">
+    photons + sand
+    <span class="eq-arrow"><span class="eq-cat">PV</span><span class="eq-arrow__glyph">→</span></span>
+    grass + sheep
+  </p>
   <p class="transition-quote__text">&ldquo;I used to see photovoltaic power and desertification control as unrelated worlds &mdash; one about electrons, the other about ecosystems.&rdquo;</p>
   <p class="transition-quote__attr">From my Stanford application essay</p>
 </div>
@@ -943,6 +998,11 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
 
 <!-- TRANSITION -->
 <div class="transition-quote reveal">
+  <p class="transition-quote__eq">
+    knowledge
+    <span class="eq-arrow"><span class="eq-cat">sharing</span><span class="eq-arrow__glyph">→</span></span>
+    acceleration
+  </p>
   <p class="transition-quote__text">&ldquo;Less sand. More grass. Fatter sheep.&rdquo;</p>
   <p class="transition-quote__attr">&mdash; The shepherd, Mu Us Desert</p>
 </div>
