@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Guowei Wang — Catalyst researcher, filmmaker, and builder. Published first-author paper, GENIUS Olympiad Gold Medal, National Yingcai Program.">
+<meta name="description" content="Guowei Wang — Catalyst researcher, filmmaker, and builder. One-stop hub for his published research, live AI tools, open-source code, and photography.">
 <meta property="og:title" content="Guowei Wang — Catalyst">
 <meta property="og:description" content="A researcher, filmmaker, and builder exploring how science can lower the activation energy of change.">
 <meta property="og:type" content="website">
@@ -584,6 +584,118 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
   text-decoration: underline; text-underline-offset: 0.2rem; white-space: nowrap;
 }
 
+/* === NETWORK (one-stop hub) === */
+.network { background: var(--bg-dark); color: var(--text-on-dark); }
+.network .chapter__label { color: var(--sand); }
+.network .chapter__title { color: #fff; }
+.network .chapter__desc { color: rgba(240,236,228,0.66); }
+.network-eq {
+  display: flex; align-items: flex-end; justify-content: center; gap: 0.55rem; flex-wrap: wrap;
+  font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em;
+  color: rgba(240,236,228,0.5);
+  margin: -1.25rem 0 2.75rem;
+}
+.network-eq__plus { color: var(--sand); }
+.network-eq__term--accent { color: var(--sand-light); font-weight: 600; }
+.network-eq .eq-cat { color: var(--sand); }
+.network-eq .eq-arrow__glyph { color: rgba(240,236,228,0.65); }
+
+.network-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  margin-bottom: 0;
+}
+.netcard {
+  display: flex; flex-direction: column; gap: 0.55rem;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(240,236,228,0.12);
+  border-radius: 12px;
+  transition: border-color 0.2s, background 0.2s, transform 0.25s var(--ease);
+}
+.netcard:hover {
+  border-color: var(--sand);
+  background: rgba(255,255,255,0.07);
+  transform: translateY(-3px);
+}
+.netcard__kind {
+  font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--sand);
+}
+.netcard__name {
+  font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: #fff;
+}
+.netcard__desc {
+  font-size: 0.875rem; line-height: 1.6; color: rgba(240,236,228,0.62); flex-grow: 1;
+}
+.netcard__url {
+  font-family: var(--font-mono); font-size: 0.6875rem;
+  color: rgba(240,236,228,0.45);
+  margin-top: 0.35rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 0.4rem;
+  transition: color 0.2s;
+}
+.netcard:hover .netcard__url { color: var(--sand-light); }
+.netcard--profile {
+  background: linear-gradient(135deg, rgba(140,21,21,0.34) 0%, rgba(140,21,21,0.10) 100%);
+  border-color: rgba(212,167,106,0.35);
+}
+.netcard--profile:hover { border-color: var(--sand); background: linear-gradient(135deg, rgba(140,21,21,0.44) 0%, rgba(140,21,21,0.16) 100%); }
+
+.network-repos {
+  border-top: 1px solid rgba(240,236,228,0.12);
+  padding-top: 2.5rem;
+}
+.network-repos__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 1rem; flex-wrap: wrap; margin-bottom: 1.1rem;
+}
+.network-repos__title {
+  font-family: var(--font-serif); font-size: 1.375rem; font-weight: 600; color: #fff;
+}
+.network-repos__sub {
+  font-family: var(--font-sans); font-size: 0.8125rem; line-height: 1.6;
+  color: rgba(240,236,228,0.5); margin-top: 0.25rem;
+}
+.network-live-head { margin: 3.25rem 0 1.25rem; }
+.network-repos__profile {
+  font-family: var(--font-mono); font-size: 0.8125rem; color: var(--sand);
+  border-bottom: 1px dotted rgba(212,167,106,0.5);
+  padding-bottom: 1px;
+  transition: color 0.2s;
+}
+.network-repos__profile:hover { color: var(--sand-light); }
+.network-repos__profile strong { color: #fff; font-weight: 600; }
+.network-repo-list li a {
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) 120px 1fr auto;
+  column-gap: 1.25rem; row-gap: 0.15rem;
+  align-items: baseline;
+  padding: 0.85rem 0.4rem;
+  border-bottom: 1px solid rgba(240,236,228,0.08);
+  transition: background 0.2s, padding-left 0.25s var(--ease);
+}
+.network-repo-list li:first-child a { border-top: 1px solid rgba(240,236,228,0.08); }
+.network-repo-list li a:hover { background: rgba(255,255,255,0.03); padding-left: 0.8rem; }
+.repo-name {
+  font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 500; color: #fff;
+}
+.repo-lang {
+  font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.04em;
+  color: var(--sand);
+  border: 1px solid rgba(212,167,106,0.35); border-radius: 999px;
+  padding: 0.05rem 0.55rem; white-space: nowrap; justify-self: start;
+}
+.repo-desc {
+  font-family: var(--font-sans); font-size: 0.8125rem; color: rgba(240,236,228,0.55);
+}
+.repo-arrow {
+  font-family: var(--font-mono); font-size: 0.8125rem; color: var(--sand);
+  opacity: 0; transform: translateX(-6px);
+  transition: opacity 0.2s, transform 0.25s var(--ease);
+}
+.network-repo-list li a:hover .repo-arrow,
+.network-repo-list li a:focus-visible .repo-arrow { opacity: 1; transform: translateX(0); }
+
 /* === RESPONSIVE === */
 @media (max-width: 1024px) {
   .hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -594,6 +706,8 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
   .research-items { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
   .award-grid { grid-template-columns: repeat(2, 1fr); }
+  .network-cards { grid-template-columns: repeat(2, 1fr); }
+  .network-repo-list li a { grid-template-columns: minmax(140px, 180px) 110px 1fr auto; column-gap: 1rem; }
 }
 @media (max-width: 768px) {
   :root { --nav-height: 56px; }
@@ -621,6 +735,21 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
   .about__details { flex-direction: column; gap: 1rem; }
   .contact__links { flex-direction: column; align-items: center; }
   .film-modal__meta { align-items: flex-start; flex-direction: column; }
+  .network-cards { grid-template-columns: 1fr; }
+  .network-eq { flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.55rem; }
+  .network-eq .eq-arrow { flex-direction: row; align-items: baseline; gap: 0.45rem; min-width: 0; }
+  .network-eq .eq-cat { margin-bottom: 0; }
+  .network-repo-list li a {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "name lang arrow"
+      "desc desc desc";
+    row-gap: 0.3rem;
+  }
+  .repo-name { grid-area: name; }
+  .repo-lang { grid-area: lang; justify-self: start; }
+  .repo-desc { grid-area: desc; }
+  .repo-arrow { grid-area: arrow; opacity: 1; transform: none; }
 }
 @media (max-width: 480px) {
   .film-metrics { grid-template-columns: 1fr; }
@@ -644,20 +773,32 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
 <body>
 
 <!--
-  PRE-LAUNCH LINK TRACKER
+  PRE-LAUNCH LINK TRACKER — updated for V6 one-stop draft (2026-08-22)
+  Wired to live destinations in this version:
+  [x] GreenBatty live demo  → https://guoweiwang27.github.io/BatteryChem-AI-Web/   (CONFIRMED same project as GreenBatty by owner, 2026-08-22)
+  [x] GreenBatty GitHub     → https://github.com/GuoweiWang27/BatteryChem-AI       (confirmed; BatteryChem repos stay PUBLIC per owner decision)
+  [x] ChemAI live demo      → https://chemai101.pages.dev/
+  [x] ChemAI GitHub         → https://github.com/GuoweiWang27/ChemAI101
+  [x] GitHub profile        → https://github.com/GuoweiWang27  (wired in Explore section + contact)
+  [x] Project card links    → canonical destinations collected in the #explore network section
+  Display curation (2026-08-22, per owner decision):
+  [x] #explore order: Open Source list FIRST (GitHub = prominent source of truth), then "Try Them Live" product cards
+  [x] Product cards: GlyUp / ChemAI Pro / BatteryChem-AI Web / G.W. Photograph / The Solar Shepherd (YouTube) / GitHub CTA
+  [x] Open Source list: BatteryChem-AI / ChemAI101 / GlyUp / Teardown only
+  [x] NOT displayed: Teardown web card (repo-only per owner), BatteryChem-AI-Web repo row (shown as web app instead), ChemAI prototype, my-car-game, math.guoweiwang.com
+  Still pending before launch:
   [ ] Resume PDF              #TODO-resume-pdf
   [ ] Paper PDF               #TODO-pdf
-  [ ] GreenBatty live demo    #TODO-greenbatty-demo
-  [ ] GreenBatty GitHub       #TODO-greenbatty-github
   [ ] Chemistry video 1       #TODO-video-1
   [ ] Chemistry video 2       #TODO-video-2
-  [ ] ChemAI live demo        #TODO-chemai-demo
-  [ ] ChemAI GitHub           #TODO-chemai-github
   [ ] Contact email           TODO@example.com
-  [ ] GitHub profile          #TODO-github
   [ ] LinkedIn profile        #TODO-linkedin
-  [ ] Project card links      waiting for canonical destinations
   [ ] Gallery lightbox        waiting for final photography assets
+  Planned URL upgrades (after subdomain consolidation, see site-map.md):
+  [ ] glyup.pages.dev        → lab.guoweiwang.com
+  [ ] chemai101.pages.dev    → chemai101.guoweiwang.com
+  [ ] github.io/BatteryChem-AI-Web → battery.guoweiwang.com (move to Cloudflare Pages if repo goes private — GitHub Pages free needs public repos)
+  [ ] ChemAI101: rotate GEMINI key & move behind a Worker proxy BEFORE further publicity (key is in the public repo's built bundle)
 -->
 
 <!-- NAV -->
@@ -669,6 +810,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
       <a href="#research" class="nav__link">Research</a>
       <a href="#film" class="nav__link">Film</a>
       <a href="#projects" class="nav__link">Projects</a>
+      <a href="#explore" class="nav__link">Explore</a>
       <a href="#awards" class="nav__link">Honors</a>
       <a href="#contact" class="nav__cta">Contact</a>
     </div>
@@ -822,8 +964,8 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
         <h3 class="research-item__title">GreenBatty &mdash; AI-Guided Battery Chemistry</h3>
         <p class="research-item__text">Built a physics-embedded AI system to screen 5,000+ natural polyphenol molecules for lithium battery electrolyte additives &mdash; replacing toxic VC/FEC with green alternatives. Embedded quantum chemistry parameters (HOMO/LUMO, dipole moment) into the model, reducing blind experimentation from 500 weeks to 3 targeted validations.</p>
         <div style="margin:0.75rem 0 0;display:flex;gap:0.5rem;flex-wrap:wrap;">
-          <a href="#TODO-greenbatty-demo" class="btn btn--outline" data-todo="GreenBatty live demo" aria-disabled="true" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">Live Demo &rarr;</a>
-          <a href="#TODO-greenbatty-github" class="btn btn--outline" data-todo="GreenBatty GitHub" aria-disabled="true" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">GitHub</a>
+          <a href="https://guoweiwang27.github.io/BatteryChem-AI-Web/" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">Live Demo &rarr;</a>
+          <a href="https://github.com/GuoweiWang27/BatteryChem-AI" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">GitHub</a>
         </div>
         <div class="tags" style="margin-top:0.75rem;">
           <span class="tag tag--accent">Physics-Embedded AI</span>
@@ -1059,8 +1201,8 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
           <h3 class="project-card__title">ChemAI 101</h3>
           <p class="project-card__desc">An AI-powered chemistry learning assistant. Provides personalized explanations and adaptive practice problems to lower the barrier to understanding chemistry.</p>
           <div style="margin-bottom:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <a href="#TODO-chemai-demo" class="btn btn--outline" data-todo="ChemAI live demo" aria-disabled="true" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">Try It &rarr;</a>
-            <a href="#TODO-chemai-github" class="btn btn--outline" data-todo="ChemAI GitHub" aria-disabled="true" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">GitHub</a>
+            <a href="https://chemai101.pages.dev/" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">Try It &rarr;</a>
+            <a href="https://github.com/GuoweiWang27/ChemAI101" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">GitHub</a>
           </div>
           <div class="tags">
             <span class="tag tag--teal">Python</span>
@@ -1094,6 +1236,110 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
   </div>
 </section>
 
+<!-- THE NETWORK — one-stop hub for every site, tool, and repo -->
+<section class="chapter network" id="explore">
+  <div class="container">
+    <div class="reveal">
+      <p class="chapter__label">The Network</p>
+      <h2 class="chapter__title">One domain. Everything I build.</h2>
+      <p class="chapter__desc">Live demos, open-source code, and photography &mdash; every project I maintain is reachable from this page. Start anywhere.</p>
+    </div>
+
+    <p class="network-eq reveal" aria-hidden="true">
+      research<span class="network-eq__plus"> + </span>code<span class="network-eq__plus"> + </span>film
+      <span class="eq-arrow"><span class="eq-cat">guoweiwang.com</span><span class="eq-arrow__glyph">&rarr;</span></span>
+      <span class="network-eq__term--accent">one stop</span>
+    </p>
+
+    <!-- Open Source first — GitHub is the source of truth -->
+    <div class="network-repos reveal">
+      <div class="network-repos__head">
+        <div>
+          <h3 class="network-repos__title">Open Source &amp; Code</h3>
+          <p class="network-repos__sub">The real code behind every demo on this page &mdash; read it, fork it, build on it.</p>
+        </div>
+        <a class="network-repos__profile" href="https://github.com/GuoweiWang27" target="_blank" rel="noopener noreferrer">github.com/<strong>GuoweiWang27</strong> &nearr;</a>
+      </div>
+      <ul class="network-repo-list">
+        <li><a href="https://github.com/GuoweiWang27/BatteryChem-AI" target="_blank" rel="noopener noreferrer">
+          <span class="repo-name">BatteryChem-AI</span>
+          <span class="repo-lang">Python</span>
+          <span class="repo-desc">High-throughput virtual screening platform for lithium-battery electrolyte formulations &mdash; the core behind the web app below.</span>
+          <span class="repo-arrow" aria-hidden="true">&nearr;</span>
+        </a></li>
+        <li><a href="https://github.com/GuoweiWang27/ChemAI101" target="_blank" rel="noopener noreferrer">
+          <span class="repo-name">ChemAI101</span>
+          <span class="repo-lang">TypeScript</span>
+          <span class="repo-desc">Vite + React chemistry learning assistant powered by Gemini.</span>
+          <span class="repo-arrow" aria-hidden="true">&nearr;</span>
+        </a></li>
+        <li><a href="https://github.com/GuoweiWang27/GlyUp" target="_blank" rel="noopener noreferrer">
+          <span class="repo-name">GlyUp</span>
+          <span class="repo-lang">TypeScript</span>
+          <span class="repo-desc">The catalyst research showcase app behind my first-author paper.</span>
+          <span class="repo-arrow" aria-hidden="true">&nearr;</span>
+        </a></li>
+        <li><a href="https://github.com/GuoweiWang27/Teardown" target="_blank" rel="noopener noreferrer">
+          <span class="repo-name">Teardown</span>
+          <span class="repo-lang">Three.js</span>
+          <span class="repo-desc">Camera teardown in 3D with GLTF models served from CDN.</span>
+          <span class="repo-arrow" aria-hidden="true">&nearr;</span>
+        </a></li>
+      </ul>
+    </div>
+
+    <!-- Live products — click and use -->
+    <div class="network-live-head reveal">
+      <h3 class="network-repos__title">Try Them Live</h3>
+      <p class="network-repos__sub">No setup, no clone &mdash; every product opens straight in your browser.</p>
+    </div>
+
+    <div class="network-cards">
+      <a class="netcard reveal" href="https://glyup.pages.dev/" target="_blank" rel="noopener noreferrer">
+        <p class="netcard__kind">Research Demo</p>
+        <h3 class="netcard__name">GlyUp</h3>
+        <p class="netcard__desc">Interactive showcase of the Pt&ndash;Fe/CeO&#8322; catalyst experiments behind my first-author glycerol oxidation paper.</p>
+        <p class="netcard__url">glyup.pages.dev <span aria-hidden="true">&rarr;</span></p>
+      </a>
+
+      <a class="netcard reveal reveal-d1" href="https://chemai101.pages.dev/" target="_blank" rel="noopener noreferrer">
+        <p class="netcard__kind">AI Tool</p>
+        <h3 class="netcard__name">ChemAI Pro</h3>
+        <p class="netcard__desc">A Gemini-powered chemistry calculator that doesn't just compute &mdash; it explains the reaction, step by step.</p>
+        <p class="netcard__url">chemai101.pages.dev <span aria-hidden="true">&rarr;</span></p>
+      </a>
+
+      <a class="netcard reveal reveal-d2" href="https://guoweiwang27.github.io/BatteryChem-AI-Web/" target="_blank" rel="noopener noreferrer">
+        <p class="netcard__kind">Web App</p>
+        <h3 class="netcard__name">BatteryChem-AI Web</h3>
+        <p class="netcard__desc">The public face of the BatteryChem core &mdash; screen electrolyte formulations in your browser, no Python required.</p>
+        <p class="netcard__url">BatteryChem-AI-Web <span aria-hidden="true">&rarr;</span></p>
+      </a>
+
+      <a class="netcard reveal" href="https://photo.guoweiwang.com/" target="_blank" rel="noopener noreferrer">
+        <p class="netcard__kind">Photography</p>
+        <h3 class="netcard__name">G.W. Photograph</h3>
+        <p class="netcard__desc">Landscapes, birds, and quiet observation &mdash; learning to notice, shot by shot.</p>
+        <p class="netcard__url">photo.guoweiwang.com <span aria-hidden="true">&rarr;</span></p>
+      </a>
+
+      <a class="netcard reveal reveal-d1" href="https://www.youtube.com/watch?v=DwX1_EKxOBU" target="_blank" rel="noopener noreferrer">
+        <p class="netcard__kind">Film</p>
+        <h3 class="netcard__name">The Solar Shepherd</h3>
+        <p class="netcard__desc">GENIUS Olympiad Gold&ndash;winning short film on agrivoltaics in the Mu Us Desert &middot; 5:56.</p>
+        <p class="netcard__url">youtube.com <span aria-hidden="true">&rarr;</span></p>
+      </a>
+
+      <a class="netcard netcard--profile reveal reveal-d2" href="https://github.com/GuoweiWang27" target="_blank" rel="noopener noreferrer">
+        <p class="netcard__kind">Open Source</p>
+        <h3 class="netcard__name">Start at GitHub</h3>
+        <p class="netcard__desc">All repositories, commits, and work-in-progress experiments live under one profile.</p>
+        <p class="netcard__url">github.com/GuoweiWang27 <span aria-hidden="true">&rarr;</span></p>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
@@ -1106,7 +1352,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           Email
         </a>
-        <a href="#TODO-github" class="contact__link" data-todo="GitHub profile" aria-disabled="true">
+        <a href="https://github.com/GuoweiWang27" target="_blank" rel="noopener noreferrer" class="contact__link">
           <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
           GitHub
         </a>
@@ -1122,6 +1368,13 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
 <!-- FOOTER -->
 <footer class="footer">
   <p class="footer__text">&copy; 2026 Guowei Wang. Designed as a <span>catalyst</span> for conversation.</p>
+  <p class="footer__text" style="margin-top:0.4rem;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.02em;">
+    <a href="https://photo.guoweiwang.com/" target="_blank" rel="noopener noreferrer">photo.</a> &middot;
+    <a href="https://glyup.pages.dev/" target="_blank" rel="noopener noreferrer">glyup.</a> &middot;
+    <a href="https://chemai101.pages.dev/" target="_blank" rel="noopener noreferrer">chemai101.</a> &middot;
+    <a href="https://guoweiwang27.github.io/BatteryChem-AI-Web/" target="_blank" rel="noopener noreferrer">batterychem</a> &middot;
+    <a href="https://github.com/GuoweiWang27" target="_blank" rel="noopener noreferrer">@GuoweiWang27</a>
+  </p>
 </footer>
 
 <!-- JS -->
