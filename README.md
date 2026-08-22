@@ -5,9 +5,11 @@
 ## 当前版本
 
 - `index.html`：Portfolio V5 工作版，主题为 “Catalyst Signature”。
+- `index-v6-one-stop.html`：**V6「One-Stop Network」草稿，待主人过目**——新增 `#explore` 一站式网络章节（6 站点卡片 + 7 仓库列表），接通 GreenBatty/ChemAI101/GitHub 真实链接，Nav 加 Explore 锚点，Footer 加站点目录行。改动清单见 `docs/portfolio-v6-one-stop-plan.md`。
 - `images/HeroPhoto.webp`：首屏优化图片。
 - `docs/portfolio-v4-plan.md`：V4 设计与内容计划。
 - `docs/portfolio-v5-catalyst-signature-plan.md`：V5 视觉签名实施方案。
+- `docs/portfolio-v6-one-stop-plan.md`：V6 一站式改稿方案（含待确认假设与验证记录）。
 
 当前仍是单文件静态原型，页面内保留了上线前链接与素材 tracking，尚未部署。
 
