@@ -55,17 +55,17 @@
 | 仓库 | 建议 | 理由 |
 | --- | --- | --- |
 | BatteryChem-AI | 公开 ✅ | 核心研究代码，申请加分项；若担心丘奖评审前创意暴露可临时转私有、出结果后转回 |
-| BatteryChem-AI-Web | 公开 ✅ | 纯前端无敏感数据；若主人想私有 → 先把它迁到 Cloudflare Pages 绑 battery.guoweiwang.com（GitHub Pages 免费版要求公开仓库，转私有会掉线） |
+| BatteryChem-AI-Web | 公开 ✅ **（已拍板 2026-08-22：保持公开）** | 纯前端无敏感数据；网页留在 GitHub Pages 不动，后续收编到 battery.guoweiwang.com 时再考虑托管平台 |
 | ChemAI101 | 公开 ✅ 但**先修 API key** | `VITE_GEMINI_API_KEY` 构建时打进 bundle，公开仓库 + 泄露 key = 任何人可烧配额。修法：key 换新 + Worker 代理转发，再公开宣传 |
 | GlyUp | 公开 ✅ | 展示型应用，无敏感数据 |
 | Teardown | 公开 ✅ | 按主人决定只做开源代码展示 |
 | ChemAI | 建议归档（GitHub Archive） | 被 ChemAI101 取代的原型，不删不展示 |
 | my-car-game | 保持现状（公开但不展示） | 纪念意义，无风险；主页不露出即可 |
 
-## 5. 待确认假设 ⚠️
+## 5. 假设确认状态
 
-1. **GreenBatty ↔ BatteryChem 映射**：主页 GreenBatty 卡片接到了 BatteryChem-AI / BatteryChem-AI-Web。需确认是同一项目两阶段还是不同项目；若是后者，按钮改回 TODO。
-2. 子域规划名（lab. / chemai101. / battery. / teardown.）仅为建议；teardown 现按主人决定不绑子域、不做网页卡片。
+1. **GreenBatty ↔ BatteryChem 映射**：✅ **已确认（2026-08-22 主人拍板）——是同一个项目**，主页按钮接线维持不变。
+2. 子域规划名（lab. / chemai101. / battery.）仅为建议；teardown 按主人决定不绑子域、不做网页卡片，上线绑定时最终定名。
 
 ## 6. 仍然挂起的链接（上线前必须补齐）
 
