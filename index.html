@@ -775,7 +775,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
 <!--
   PRE-LAUNCH LINK TRACKER — updated for V6 one-stop draft (2026-08-22)
   Wired to live destinations in this version:
-  [x] GreenBatty live demo  → https://guoweiwang27.github.io/BatteryChem-AI-Web/   (CONFIRMED same project as GreenBatty by owner, 2026-08-22)
+  [x] GreenBatty live demo  → https://battery.guoweiwang.com/   (CONFIRMED same project as GreenBatty by owner, 2026-08-22)
   [x] GreenBatty GitHub     → https://github.com/GuoweiWang27/BatteryChem-AI       (confirmed; BatteryChem repos stay PUBLIC per owner decision)
   [x] ChemAI live demo      → https://chemai101.guoweiwang.com/
   [x] ChemAI GitHub         → https://github.com/GuoweiWang27/ChemAI101
@@ -783,9 +783,9 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
   [x] Project card links    → canonical destinations collected in the #explore network section
   Display curation (2026-08-22, per owner decision):
   [x] #explore order: Open Source list FIRST (GitHub = prominent source of truth), then "Try Them Live" product cards
-  [x] Product cards: GlyUp / ChemAI Pro / BatteryChem-AI Web / G.W. Photograph / The Solar Shepherd (YouTube) / GitHub CTA
+  [x] Product cards: GlyUp / ChemAI Pro / BatteryChem-AI Web / Teardown / G.W. Photograph / The Solar Shepherd (YouTube) / GitHub CTA
   [x] Open Source list: BatteryChem-AI / ChemAI101 / GlyUp / Teardown only
-  [x] NOT displayed: Teardown web card (repo-only per owner), BatteryChem-AI-Web repo row (shown as web app instead), ChemAI prototype, my-car-game, math.guoweiwang.com
+  [x] NOT displayed: BatteryChem-AI-Web repo row (shown as web app instead), ChemAI prototype, my-car-game, math.guoweiwang.com
   Still pending before launch:
   [ ] Resume PDF              #TODO-resume-pdf
   [ ] Paper PDF               #TODO-pdf
@@ -797,7 +797,8 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
   Planned URL upgrades (after subdomain consolidation, see site-map.md):
   [ ] glyup.pages.dev        → lab.guoweiwang.com
   [ ] chemai101.pages.dev    → chemai101.guoweiwang.com
-  [ ] github.io/BatteryChem-AI-Web → battery.guoweiwang.com (move to Cloudflare Pages if repo goes private — GitHub Pages free needs public repos)
+  [x] github.io/BatteryChem-AI-Web → battery.guoweiwang.com
+  [x] github.io/Teardown → teardown.guoweiwang.com
   [ ] ChemAI101: rotate GEMINI key & move behind a Worker proxy BEFORE further publicity (key is in the public repo's built bundle)
 -->
 
@@ -964,7 +965,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
         <h3 class="research-item__title">GreenBatty &mdash; AI-Guided Battery Chemistry</h3>
         <p class="research-item__text">Built a physics-embedded AI system to screen 5,000+ natural polyphenol molecules for lithium battery electrolyte additives &mdash; replacing toxic VC/FEC with green alternatives. Embedded quantum chemistry parameters (HOMO/LUMO, dipole moment) into the model, reducing blind experimentation from 500 weeks to 3 targeted validations.</p>
         <div style="margin:0.75rem 0 0;display:flex;gap:0.5rem;flex-wrap:wrap;">
-          <a href="https://guoweiwang27.github.io/BatteryChem-AI-Web/" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">Live Demo &rarr;</a>
+          <a href="https://battery.guoweiwang.com/" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">Live Demo &rarr;</a>
           <a href="https://github.com/GuoweiWang27/BatteryChem-AI" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">GitHub</a>
         </div>
         <div class="tags" style="margin-top:0.75rem;">
@@ -1270,7 +1271,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
         <li><a href="https://github.com/GuoweiWang27/ChemAI101" target="_blank" rel="noopener noreferrer">
           <span class="repo-name">ChemAI101</span>
           <span class="repo-lang">TypeScript</span>
-          <span class="repo-desc">Vite + React chemistry learning assistant powered by Gemini.</span>
+          <span class="repo-desc">Vite + React chemistry learning assistant powered by DeepSeek.</span>
           <span class="repo-arrow" aria-hidden="true">&nearr;</span>
         </a></li>
         <li><a href="https://github.com/GuoweiWang27/GlyUp" target="_blank" rel="noopener noreferrer">
@@ -1305,32 +1306,39 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
       <a class="netcard reveal reveal-d1" href="https://chemai101.guoweiwang.com/" target="_blank" rel="noopener noreferrer">
         <p class="netcard__kind">AI Tool</p>
         <h3 class="netcard__name">ChemAI Pro</h3>
-        <p class="netcard__desc">A Gemini-powered chemistry calculator that doesn't just compute &mdash; it explains the reaction, step by step.</p>
+        <p class="netcard__desc">A DeepSeek-powered chemistry calculator that doesn't just compute &mdash; it explains the reaction, step by step.</p>
         <p class="netcard__url">chemai101.guoweiwang.com <span aria-hidden="true">&rarr;</span></p>
       </a>
 
-      <a class="netcard reveal reveal-d2" href="https://guoweiwang27.github.io/BatteryChem-AI-Web/" target="_blank" rel="noopener noreferrer">
+      <a class="netcard reveal reveal-d2" href="https://battery.guoweiwang.com/" target="_blank" rel="noopener noreferrer">
         <p class="netcard__kind">Web App</p>
         <h3 class="netcard__name">BatteryChem-AI Web</h3>
         <p class="netcard__desc">The public face of the BatteryChem core &mdash; screen electrolyte formulations in your browser, no Python required.</p>
-        <p class="netcard__url">BatteryChem-AI-Web <span aria-hidden="true">&rarr;</span></p>
+        <p class="netcard__url">battery.guoweiwang.com <span aria-hidden="true">&rarr;</span></p>
       </a>
 
-      <a class="netcard reveal" href="https://photo.guoweiwang.com/" target="_blank" rel="noopener noreferrer">
+      <a class="netcard reveal" href="https://teardown.guoweiwang.com/" target="_blank" rel="noopener noreferrer">
+        <p class="netcard__kind">3D Exploration</p>
+        <h3 class="netcard__name">Teardown</h3>
+        <p class="netcard__desc">An interactive camera teardown in 3D, exploring how structure, mechanics, and visual storytelling fit together.</p>
+        <p class="netcard__url">teardown.guoweiwang.com <span aria-hidden="true">&rarr;</span></p>
+      </a>
+
+      <a class="netcard reveal reveal-d1" href="https://photo.guoweiwang.com/" target="_blank" rel="noopener noreferrer">
         <p class="netcard__kind">Photography</p>
         <h3 class="netcard__name">G.W. Photograph</h3>
         <p class="netcard__desc">Landscapes, birds, and quiet observation &mdash; learning to notice, shot by shot.</p>
         <p class="netcard__url">photo.guoweiwang.com <span aria-hidden="true">&rarr;</span></p>
       </a>
 
-      <a class="netcard reveal reveal-d1" href="https://www.youtube.com/watch?v=DwX1_EKxOBU" target="_blank" rel="noopener noreferrer">
+      <a class="netcard reveal reveal-d2" href="https://www.youtube.com/watch?v=DwX1_EKxOBU" target="_blank" rel="noopener noreferrer">
         <p class="netcard__kind">Film</p>
         <h3 class="netcard__name">The Solar Shepherd</h3>
         <p class="netcard__desc">GENIUS Olympiad Gold&ndash;winning short film on agrivoltaics in the Mu Us Desert &middot; 5:56.</p>
         <p class="netcard__url">youtube.com <span aria-hidden="true">&rarr;</span></p>
       </a>
 
-      <a class="netcard netcard--profile reveal reveal-d2" href="https://github.com/GuoweiWang27" target="_blank" rel="noopener noreferrer">
+      <a class="netcard netcard--profile reveal" href="https://github.com/GuoweiWang27" target="_blank" rel="noopener noreferrer">
         <p class="netcard__kind">Open Source</p>
         <h3 class="netcard__name">Start at GitHub</h3>
         <p class="netcard__desc">All repositories, commits, and work-in-progress experiments live under one profile.</p>
@@ -1372,7 +1380,8 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
     <a href="https://photo.guoweiwang.com/" target="_blank" rel="noopener noreferrer">photo.</a> &middot;
     <a href="https://lab.guoweiwang.com/" target="_blank" rel="noopener noreferrer">glyup.</a> &middot;
     <a href="https://chemai101.guoweiwang.com/" target="_blank" rel="noopener noreferrer">chemai101.</a> &middot;
-    <a href="https://guoweiwang27.github.io/BatteryChem-AI-Web/" target="_blank" rel="noopener noreferrer">batterychem</a> &middot;
+    <a href="https://battery.guoweiwang.com/" target="_blank" rel="noopener noreferrer">batterychem.</a> &middot;
+    <a href="https://teardown.guoweiwang.com/" target="_blank" rel="noopener noreferrer">teardown.</a> &middot;
     <a href="https://github.com/GuoweiWang27" target="_blank" rel="noopener noreferrer">@GuoweiWang27</a>
   </p>
 </footer>
