@@ -1,5 +1,4 @@
 {
-  "//": "Guowei homepage — Vercel config. Active only when this repo is imported to Vercel (root-domain switch, see Engineering/docs/maintenance-guide.md §5.1). GitHub Pages ignores this file.",
   "rewrites": [
     {
       "source": "/rankings/:path*",
