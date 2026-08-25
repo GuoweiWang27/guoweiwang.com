@@ -3,12 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Guowei Wang — Catalyst researcher, filmmaker, and builder. One-stop hub for his published research, live AI tools, open-source code, and photography.">
+<meta name="description" content="Guowei Wang — Catalyst researcher, filmmaker, and builder. One-stop hub for his research, live AI tools, open-source code, and photography.">
 <meta property="og:title" content="Guowei Wang — Catalyst">
 <meta property="og:description" content="A researcher, filmmaker, and builder exploring how science can lower the activation energy of change.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="images/HeroPhoto.webp">
+<meta property="og:url" content="https://guoweiwang.com/">
+<link rel="canonical" href="https://guoweiwang.com/">
+<meta property="og:image" content="https://guoweiwang.com/images/HeroPhoto.webp">
 <meta property="og:image:alt" content="Guowei Wang at a solar farm in the desert">
+<meta name="twitter:card" content="summary_large_image">
 <title>Guowei Wang — Catalyst</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23faf8f5'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='32' font-weight='700' fill='%238C1515'%3EGW%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -771,6 +774,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
 </style>
 </head>
 <body>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 
 <!--
   PRE-LAUNCH LINK TRACKER — updated for V6 one-stop draft (2026-08-22)
@@ -786,20 +790,21 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
   [x] Product cards: GlyUp / ChemAI Pro / BatteryChem-AI Web / Teardown / G.W. Photograph / The Solar Shepherd (YouTube) / GitHub CTA
   [x] Open Source list: BatteryChem-AI / ChemAI101 / GlyUp / Teardown only
   [x] NOT displayed: BatteryChem-AI-Web repo row (shown as web app instead), ChemAI prototype, my-car-game, math.guoweiwang.com
-  Still pending before launch:
-  [ ] Resume PDF              #TODO-resume-pdf
-  [ ] Paper PDF               #TODO-pdf
-  [ ] Chemistry video 1       #TODO-video-1
-  [ ] Chemistry video 2       #TODO-video-2
-  [ ] Contact email           TODO@example.com
-  [ ] LinkedIn profile        #TODO-linkedin
+  Factual audit pass (2026-08-25): every public claim aligned to the YouMingVault activity SSOT —
+  GENIUS = Short Film Honorable Mention (never Gold), paper = NHSJS under review (never published),
+  school = HS Affiliated to Beijing Normal University (never BFSU), desert = Tengger (never Mu Us),
+  legacy AP/GPA/cycling/view-count numbers removed or re-scoped.
+  Still pending owner decisions (see Vault 主页V6审计 doc §9):
+  [ ] Contact email           awaiting owner choice (guowei08@ vs domain mailbox) — dead link removed meanwhile
+  [ ] LinkedIn profile        account does not exist yet — button removed meanwhile
+  [ ] Resume PDF              needs sanitized public version approval — button removed meanwhile
   [ ] Gallery lightbox        waiting for final photography assets
   Planned URL upgrades (after subdomain consolidation, see site-map.md):
   [ ] glyup.pages.dev        → lab.guoweiwang.com
   [ ] chemai101.pages.dev    → chemai101.guoweiwang.com
   [x] github.io/BatteryChem-AI-Web → battery.guoweiwang.com
   [x] github.io/Teardown → teardown.guoweiwang.com
-  [ ] ChemAI101: rotate GEMINI key & move behind a Worker proxy BEFORE further publicity (key is in the public repo's built bundle)
+  [x] ChemAI101 API-key risk closed (2026-08-23): Worker proxy + DeepSeek official API took over; old secret deleted
 -->
 
 <!-- NAV -->
@@ -811,8 +816,8 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
       <a href="#research" class="nav__link">Research</a>
       <a href="#film" class="nav__link">Film</a>
       <a href="#projects" class="nav__link">Projects</a>
-      <a href="#explore" class="nav__link">Explore</a>
       <a href="#awards" class="nav__link">Honors</a>
+      <a href="#explore" class="nav__link">Explore</a>
       <a href="#contact" class="nav__cta">Contact</a>
     </div>
     <button class="nav__hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
@@ -843,15 +848,11 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
       </div>
       <div class="hero__meta">
         <span>Beijing, China</span>
-        <span>BFSU Affiliated High School</span>
+        <span>High School Affiliated to Beijing Normal University</span>
       </div>
       <div class="hero__actions">
         <a href="#about" class="btn btn--primary">Read My Story</a>
         <a href="#contact" class="btn btn--outline">Get in Touch</a>
-        <a href="#TODO-resume-pdf" class="btn btn--outline" data-todo="Resume PDF" aria-disabled="true">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h5M9 12h6M9 16h6"/></svg>
-          Resume
-        </a>
       </div>
     </div>
     <div class="hero__photo reveal reveal-d1">
@@ -870,29 +871,28 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
           <div class="label">About Photo</div>
           <p>Lifestyle photo &mdash; pick one:<br>
           A) Cycling on a mountain road, helmet on, skyline behind<br>
-          B) In the Mu Us Desert with camera, solar panels and sheep behind<br>
+          B) In the Tengger Desert with camera, solar panels and sheep behind<br>
           C) Group photo with club members doing experiments<br>
           Horizontal, min 800&times;600px, natural smile.</p>
         </div>
       </div>
       <div class="about__text reveal reveal-d1">
         <h2>A bit about me</h2>
-        <p>I'm a student at BFSU Affiliated High School in Beijing, spending most of my time between a chemistry lab and a video editing timeline.</p>
-        <p>My research started with a question about catalysts &mdash; how tiny amounts of platinum can transform waste glycerol into something useful. That question led me to a Peking University lab, a first-author paper, and eventually to the Mu Us Desert, where I discovered that the biggest catalyst isn't always a molecule.</p>
-        <p>When I'm not in the lab, I'm probably on my bike. I ride about 2,000 km a year &mdash; it's how I think. Some of my best ideas about reaction mechanisms came somewhere around kilometer 40.</p>
+        <p>I'm a student at the High School Affiliated to Beijing Normal University in Beijing, spending most of my time between a chemistry lab and a video editing timeline.</p>
+        <p>My research started with a question about catalysts &mdash; how tiny amounts of platinum can transform waste glycerol into something useful. That question led me to a Peking University lab, a first-author manuscript now under review, and eventually to the Tengger Desert, where I discovered that the biggest catalyst isn't always a molecule.</p>
+        <p>When I'm not in the lab, I'm probably on my bike &mdash; 50-plus kilometres in most weeks, with a few 200-kilometre single-day rides each year. Some of my best ideas about reaction mechanisms came somewhere around kilometer 40.</p>
         <div class="about__details">
           <div class="about__detail">
-            <strong>Currently reading</strong>
-            <!-- TODO: fill in actual book title -->
-            The Disappearing Spoon
+            <strong>Currently prototyping</strong>
+            Gen-2 bike energy-recovery hardware
           </div>
           <div class="about__detail">
             <strong>Favorite molecule</strong>
             Ferrocene (it spins)
           </div>
           <div class="about__detail">
-            <strong>km cycled this year</strong>
-            1,847
+            <strong>Longest ride</strong>
+            200+ km in a day
           </div>
         </div>
       </div>
@@ -924,18 +924,14 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
         </div>
       </div>
       <div class="research-featured__body">
-        <p class="research-featured__org">National Yingcai Program &middot; Peking University &middot; 2024&ndash;2025</p>
+        <p class="research-featured__org">National Yingcai Program &middot; Peking University &middot; 2025</p>
         <h3 class="research-featured__title">Glycerol Oxidation Catalysis</h3>
-        <p class="research-featured__text">Selected for China's national Yingcai (Talents) Program, co-administered by the China Association for Science and Technology and the Ministry of Education &mdash; one of approximately 1,800 students chosen nationwide through a three-stage screening process.</p>
-        <p class="research-featured__text">At the Peking University Department of Geosciences, I independently operated XRD, TEM, and XPS to characterize Pt-Fe-CeO&#8322; catalysts for glycerol oxidation. The resulting first-author manuscript was published in the <em>Journal of Student Research</em>.</p>
+        <p class="research-featured__text">Selected for China's national Yingcai (Talents) Program, co-administered by the China Association for Science and Technology and the Ministry of Education &mdash; roughly 1,800 students nationwide per academic year, trained across 58 partner universities.</p>
+        <p class="research-featured__text">In a laboratory affiliated with Peking University's College of Chemistry and Molecular Engineering, I independently operated XRD, TEM, and XPS to characterize Pt&ndash;Fe&ndash;CeO&#8322; catalysts for glycerol oxidation. The resulting first-author manuscript is now under review at NHSJS.</p>
         <div style="margin:1rem 0;display:flex;gap:0.75rem;flex-wrap:wrap;">
           <a href="https://lab.guoweiwang.com/" class="btn btn--outline" style="font-size:0.75rem;padding:0.45rem 1rem;border-radius:6px;">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h5M9 12h6M9 16h4"/></svg>
-            View Paper &rarr;
-          </a>
-          <a href="#TODO-pdf" class="btn btn--outline" data-todo="Paper PDF" aria-disabled="true" style="font-size:0.75rem;padding:0.45rem 1rem;border-radius:6px;">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h5M12 10v7M9 14l3 3 3-3"/></svg>
-            Download PDF
+            Explore the Interactive Showcase &rarr;
           </a>
         </div>
         <div class="tags">
@@ -947,11 +943,15 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
         <div class="research-stats">
           <div>
             <p class="research-stat__value">~1,800 / year</p>
-            <p class="research-stat__label">From 25 cities · 58 universities</p>
+            <p class="research-stat__label">Nationwide &middot; 58 partner universities</p>
+          </div>
+          <div>
+            <p class="research-stat__value">1<sup>st</sup> Prize</p>
+            <p class="research-stat__label">Xicheng District S&amp;T Innovation Competition</p>
           </div>
           <div>
             <p class="research-stat__value">1<sup>st</sup> Author</p>
-            <p class="research-stat__label">Journal of Student Research</p>
+            <p class="research-stat__label">Manuscript under review at NHSJS</p>
           </div>
         </div>
       </div>
@@ -960,29 +960,29 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
     <!-- Secondary items -->
     <div class="research-items">
       <div class="research-item research-item--technology reveal">
-        <p class="research-item__date">2025 &ndash; 2026</p>
-        <p class="research-item__org">Yau Science Award &middot; Tsinghua University</p>
-        <h3 class="research-item__title">GreenBatty &mdash; AI-Guided Battery Chemistry</h3>
-        <p class="research-item__text">Built a physics-embedded AI system to screen 5,000+ natural polyphenol molecules for lithium battery electrolyte additives &mdash; replacing toxic VC/FEC with green alternatives. Embedded quantum chemistry parameters (HOMO/LUMO, dipole moment) into the model, reducing blind experimentation from 500 weeks to 3 targeted validations.</p>
+        <p class="research-item__date">Ongoing</p>
+        <p class="research-item__org">Tsinghua University &middot; Yau Science Award Candidate</p>
+        <h3 class="research-item__title">GreenBatty &mdash; Greener Battery Electrolytes</h3>
+        <p class="research-item__text">A Tsinghua-based research program asking whether five natural polyphenols can serve as electrolyte additives in a fixed lithium-battery chemistry. Candidate molecules are locked into a dual-constraint test matrix; AI assists pre-unblinding triage while wet-lab validation rounds continue. Yau Science Award submission in preparation.</p>
         <div style="margin:0.75rem 0 0;display:flex;gap:0.5rem;flex-wrap:wrap;">
           <a href="https://battery.guoweiwang.com/" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">Live Demo &rarr;</a>
           <a href="https://github.com/GuoweiWang27/BatteryChem-AI" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">GitHub</a>
         </div>
         <div class="tags" style="margin-top:0.75rem;">
-          <span class="tag tag--accent">Physics-Embedded AI</span>
-          <span class="tag tag--teal">5,000 &rarr; 3 Candidates</span>
+          <span class="tag tag--accent">Wet-Lab Validation Ongoing</span>
+          <span class="tag tag--teal">Five-Candidate Matrix</span>
           <span class="tag">Green Chemistry</span>
           <span class="tag">Electrochemistry</span>
         </div>
       </div>
       <div class="research-item reveal reveal-d1">
-        <p class="research-item__date">Summer 2025</p>
-        <p class="research-item__org">Stanford University</p>
-        <h3 class="research-item__title">Pre-Collegiate Summer Program</h3>
-        <p class="research-item__text">Completed an intensive 8-week residential program at Stanford, conducting faculty-mentored research and collaborating with peers from around the world. Secured a recommendation letter from a Stanford professor.</p>
+        <p class="research-item__date">Summer 2026</p>
+        <p class="research-item__org">Stanford Summer Session</p>
+        <h3 class="research-item__title">CHEM 31A &amp; CEE 176C</h3>
+        <p class="research-item__text">Eight residential weeks, two courses: Chemical Principles I, and Energy Storage Integration &mdash; Vehicles, Renewables, and the Grid. Built the dispatch-scheduling model for the latter course's two-person final project and co-authored the report. Earned an A in both courses.</p>
         <div class="tags" style="margin-top:0.75rem;">
           <span class="tag tag--accent">Stanford</span>
-          <span class="tag">8 Weeks &middot; Residential</span>
+          <span class="tag">Energy Storage &middot; Modeling</span>
         </div>
       </div>
     </div>
@@ -997,7 +997,6 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
     grass + sheep
   </p>
   <p class="transition-quote__text">&ldquo;I used to see photovoltaic power and desertification control as unrelated worlds &mdash; one about electrons, the other about ecosystems.&rdquo;</p>
-  <p class="transition-quote__attr">From my Stanford application essay</p>
 </div>
 
 <!-- CHAPTER 2: FILM -->
@@ -1014,14 +1013,14 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
       <div class="hero__photo-placeholder" style="aspect-ratio:21/9;height:100%;border-radius:0;background:linear-gradient(135deg, #2a1f0e 0%, #4a3520 50%, #1a1510 100%);">
         <div class="icon" style="font-size:3rem;">&#x1F3AC;</div>
         <div class="label" style="color:#D4A76A;">Film Hero Image</div>
-        <p style="color:rgba(240,236,228,0.6);max-width:500px;">Iconic frame from the film &mdash; sheep under solar panels at golden hour in the Mu Us Desert. Or: Guowei filming in the desert with camera. Ultra-wide, min 1920&times;800px, golden/warm tones. Dark gradient overlay will be applied.</p>
+        <p style="color:rgba(240,236,228,0.6);max-width:500px;">Iconic frame from the film &mdash; sheep under solar panels at golden hour in the Tengger Desert. Or: Guowei filming in the desert with camera. Ultra-wide, min 1920&times;800px, golden/warm tones. Dark gradient overlay will be applied.</p>
       </div>
       <button class="film-hero__play" id="filmPlay" type="button" aria-label="Play The Solar Shepherd">
         <svg viewBox="0 0 24 24"><polygon points="9,6 19,12 9,18"/></svg>
       </button>
       <div class="film-hero__overlay"></div>
       <div class="film-hero__content">
-        <p class="film-hero__badge">GENIUS Olympiad Gold Medal &middot; 2026</p>
+        <p class="film-hero__badge">GENIUS Olympiad &middot; Short Film Honorable Mention &middot; 2026</p>
         <h3 class="film-hero__title">The Solar Shepherd</h3>
         <p class="film-hero__subtitle">A Catalyst for Ecological Restoration &middot; 5:56</p>
       </div>
@@ -1030,8 +1029,8 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
     <!-- Film body -->
     <div class="film-body">
       <div class="reveal">
-        <p class="film-desc">An award-winning short film exploring agrivoltaics in the Mu Us Desert. Solar panels reduce infrared radiation by 82%, lowering the activation energy for natural ecological recovery while creating new livelihoods for local herders.</p>
-        <p class="film-desc">One of only two projects selected from mainland China for the GENIUS Olympiad international finals.</p>
+        <p class="film-desc">An award-winning short documentary exploring agrivoltaics in the Tengger Desert &mdash; where photovoltaic arrays shade the sand, plants creep back, and herders graze flocks beneath the panels. A story about technology as the catalyst, not the conqueror.</p>
+        <p class="film-desc">Selected for the GENIUS Olympiad international finals &mdash; among 32 finalist projects chosen from 105 submissions worldwide.</p>
 
         <div class="four-questions">
           <p class="four-questions__label">The Four Questions</p>
@@ -1045,16 +1044,16 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
       <div class="reveal reveal-d1">
         <div class="film-metrics">
           <div class="film-metric">
-            <p class="film-metric__value">Gold</p>
-            <p class="film-metric__label">GENIUS Olympiad 2026</p>
+            <p class="film-metric__value">Honorable Mention</p>
+            <p class="film-metric__label">GENIUS Olympiad 2026 &middot; Short Film</p>
           </div>
           <div class="film-metric">
-            <p class="film-metric__value">82%</p>
-            <p class="film-metric__label">IR Radiation Reduced</p>
+            <p class="film-metric__value">105&rarr;32</p>
+            <p class="film-metric__label">Submissions &rarr; international finalists</p>
           </div>
           <div class="film-metric">
-            <p class="film-metric__value">1 of 2</p>
-            <p class="film-metric__label">From mainland China</p>
+            <p class="film-metric__value">2</p>
+            <p class="film-metric__label">Person team, start to finish</p>
           </div>
           <div class="film-metric">
             <p class="film-metric__value">5:56</p>
@@ -1088,14 +1087,14 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
             <div class="label" style="color:#D4A76A;font-size:0.625rem;">Photo 2</div>
             <p style="font-size:0.6875rem;color:rgba(240,236,228,0.5);">Vast solar panel array stretching to the horizon, desert sand, dramatic sky. Scale and grandeur.</p>
           </div>
-          <div class="gallery__caption">Ningdong Power Plant, Mu Us Desert</div>
+          <div class="gallery__caption">Panel arrays to the horizon, Tengger Desert</div>
         </div>
 
         <div class="gallery__item">
           <div class="hero__photo-placeholder" style="aspect-ratio:auto;height:100%;border-radius:0;background:linear-gradient(135deg,#1a2a1a,#2a4a2a);">
             <div class="icon" style="font-size:1.5rem;">&#x1F33F;</div>
             <div class="label" style="color:#D4A76A;font-size:0.625rem;">Photo 3</div>
-            <p style="font-size:0.6875rem;color:rgba(240,236,228,0.5);">Artemisia growing under panels &mdash; close-up of green plants in sand, panel shadow visible. The 30% moisture difference, visualized.</p>
+            <p style="font-size:0.6875rem;color:rgba(240,236,228,0.5);">Artemisia growing under panels &mdash; close-up of green plants in sand, panel shadow visible. New growth taking hold in the shade.</p>
           </div>
           <div class="gallery__caption">Artemisia thriving under the panels</div>
         </div>
@@ -1147,7 +1146,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
     acceleration
   </p>
   <p class="transition-quote__text">&ldquo;Less sand. More grass. Fatter sheep.&rdquo;</p>
-  <p class="transition-quote__attr">&mdash; The shepherd, Mu Us Desert</p>
+  <p class="transition-quote__attr">&mdash; The shepherd, Tengger Desert</p>
 </div>
 
 <!-- CHAPTER 3: PROJECTS -->
@@ -1165,23 +1164,13 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
           <div class="hero__photo-placeholder" style="aspect-ratio:auto;height:100%;border-radius:0;">
             <div class="icon">&#x269B;&#xFE0F;</div>
             <div class="label">Club Photo</div>
-            <p>Club members around a lab bench, or filming a science video together. Horizontal, min 600&times;300px.</p>
+            <p>Club members around a lab bench, or during a primary-school outreach visit. Horizontal, min 600&times;300px.</p>
           </div>
         </div>
         <div class="project-card__body">
-          <p class="project-card__stat">50,000+ Views</p>
-          <h3 class="project-card__title">Chemistry &amp; Life Society</h3>
-          <p class="project-card__desc">Founded and led a school science club producing public chemistry education videos. Organized hands-on experiments, journal reading sessions, and peer teaching events.</p>
-          <div style="margin-bottom:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <a href="#TODO-video-1" class="btn btn--outline" data-todo="Chemistry video 1" aria-disabled="true" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg>
-              Video 1
-            </a>
-            <a href="#TODO-video-2" class="btn btn--outline" data-todo="Chemistry video 2" aria-disabled="true" style="font-size:0.6875rem;padding:0.35rem 0.75rem;border-radius:6px;">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg>
-              Video 2
-            </a>
-          </div>
+          <p class="project-card__stat">Founder &amp; President &middot; 40 members</p>
+          <h3 class="project-card__title">Chemistry &amp; Life Science Society</h3>
+          <p class="project-card__desc">Founded and lead a board-approved science club that has brought hands-on chemistry outreach to a local primary school two years running &mdash; including voting to cut our flashiest demo after our own safety review. The club's showcase product is ChemAI&nbsp;101 below.</p>
           <div class="tags">
             <span class="tag tag--accent">Leadership</span>
             <span class="tag">Science Communication</span>
@@ -1212,6 +1201,44 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
           </div>
         </div>
       </div>
+
+      <div class="project-card reveal">
+        <div class="project-card__photo">
+          <div class="hero__photo-placeholder" style="aspect-ratio:auto;height:100%;border-radius:0;background:linear-gradient(135deg,#1a2433,#2a3a52);">
+            <div class="icon">&#x1F6B4;</div>
+            <div class="label" style="color:#5eead4;">Prototype Photo</div>
+            <p style="color:rgba(240,236,228,0.5);">Gen-1 energy-recovery prototype mounted on a school-team bike &mdash; or CAD render beside the real unit.</p>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <p class="project-card__stat" style="color:var(--teal);">Hardware &middot; Iterating</p>
+          <h3 class="project-card__title">Adaptive Bike Energy Recovery</h3>
+          <p class="project-card__desc">A research-and-build project exploring adaptive kinetic energy recovery for bicycles: modeled the structure in 3D, delivered three first-generation prototypes now in field trials with the school cycling team, and am iterating a lower-drag second generation.</p>
+          <div class="tags">
+            <span class="tag tag--teal">3D Modeling</span>
+            <span class="tag">3 Prototypes &middot; Field Trials</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-d1">
+        <div class="project-card__photo">
+          <div class="hero__photo-placeholder" style="aspect-ratio:auto;height:100%;border-radius:0;background:linear-gradient(135deg,#2e1a1a,#4a2a2a);">
+            <div class="icon">&#x1F50B;</div>
+            <div class="label" style="color:#fca5a5;">Action Photo</div>
+            <p style="color:rgba(240,236,228,0.5);">Team walkthrough with the safety handbook, or the resident survey session.</p>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <p class="project-card__stat" style="color:var(--teal);">Community Safety &middot; Team of 5</p>
+          <h3 class="project-card__title">E-Bike Battery Safety Initiative</h3>
+          <p class="project-card__desc">Led a five-person club team through an e-bike battery safety research project &mdash; producing a technical report, an illustrated resident handbook, a household survey, and a community event playbook. Neighborhood rollout sessions are planned for fall 2026.</p>
+          <div class="tags">
+            <span class="tag tag--accent">Project Lead</span>
+            <span class="tag">Public Safety Education</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1225,14 +1252,15 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
       <p class="awards__desc">A track record across research, film, and academics.</p>
     </div>
     <div class="award-grid reveal">
-      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v4a4 4 0 0 1-8 0zM12 12v5M8 21h8M10 17h4M8 6H4v1a4 4 0 0 0 4 4M16 6h4v1a4 4 0 0 1-4 4"/></svg></div><span class="award__text">GENIUS Olympiad Gold Medal</span></div>
-      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3M8 15h8"/></svg></div><span class="award__text">Yingcai Program · 1 of ~1,800 Nationally</span></div>
-      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 12h6M9 16h6"/></svg></div><span class="award__text">PKU Research · First Author</span></div>
-      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4"/><ellipse cx="12" cy="12" rx="4" ry="9" transform="rotate(45 12 12)"/></svg></div><span class="award__text">UK Chemistry Olympiad</span></div>
+      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v4a4 4 0 0 1-8 0zM12 12v5M8 21h8M10 17h4M8 6H4v1a4 4 0 0 0 4 4M16 6h4v1a4 4 0 0 1-4 4"/></svg></div><span class="award__text">GENIUS Olympiad &middot; Short Film Honorable Mention</span></div>
+      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="4"/><ellipse cx="12" cy="12" rx="4" ry="9" transform="rotate(45 12 12)"/></svg></div><span class="award__text">UK Chemistry Olympiad &middot; Round One Gold Certificate</span></div>
+      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></div><span class="award__text">National Yingcai Program &middot; Peking University</span></div>
+      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3M8 15h8"/></svg></div><span class="award__text">Regeneron ISEF CHN011 &middot; Advanced to Round 3</span></div>
+      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v4a4 4 0 0 1-8 0zM12 12v5M8 21h8M10 17h4M8 6H4v1a4 4 0 0 0 4 4M16 6h4v1a4 4 0 0 1-4 4"/></svg></div><span class="award__text">Xicheng District S&amp;T Innovation Contest &middot; 1st Prize</span></div>
+      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 12h6M9 16h6"/></svg></div><span class="award__text">PKU Research &middot; First-Author Manuscript</span></div>
       <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-5 9 5-9 5zM7 12v5c3 2 7 2 10 0v-5M21 9v6"/></svg></div><span class="award__text">AP Capstone Diploma</span></div>
-      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20v-7h3v7M11 20V9h3v11M17 20V4h3v16M3 20h19"/></svg></div><span class="award__text">14 APs &middot; 10+ Fives</span></div>
-      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></div><span class="award__text">GPA 3.99 / 4.00</span></div>
-      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 18V9h14v9M4 9l8-5 8 5M9 18v-5h6v5"/></svg></div><span class="award__text">Stanford Summer Program</span></div>
+      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20v-7h3v7M11 20V9h3v11M17 20V4h3v16M3 20h19"/></svg></div><span class="award__text">AP Scholar with Distinction</span></div>
+      <div class="award"><div class="award__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 18V9h14v9M4 9l8-5 8 5M9 18v-5h6v5"/></svg></div><span class="award__text">Principal&apos;s Honor &middot; Top 10% by GPA</span></div>
     </div>
   </div>
 </section>
@@ -1265,7 +1293,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
         <li><a href="https://github.com/GuoweiWang27/BatteryChem-AI" target="_blank" rel="noopener noreferrer">
           <span class="repo-name">BatteryChem-AI</span>
           <span class="repo-lang">Python</span>
-          <span class="repo-desc">High-throughput virtual screening platform for lithium-battery electrolyte formulations &mdash; the core behind the web app below.</span>
+          <span class="repo-desc">Physics-guided screening research for lithium-battery electrolyte additives &mdash; the core behind the web app below.</span>
           <span class="repo-arrow" aria-hidden="true">&nearr;</span>
         </a></li>
         <li><a href="https://github.com/GuoweiWang27/ChemAI101" target="_blank" rel="noopener noreferrer">
@@ -1277,7 +1305,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
         <li><a href="https://github.com/GuoweiWang27/GlyUp" target="_blank" rel="noopener noreferrer">
           <span class="repo-name">GlyUp</span>
           <span class="repo-lang">TypeScript</span>
-          <span class="repo-desc">The catalyst research showcase app behind my first-author paper.</span>
+          <span class="repo-desc">Interactive showcase for my first-author glycerol-oxidation research.</span>
           <span class="repo-arrow" aria-hidden="true">&nearr;</span>
         </a></li>
         <li><a href="https://github.com/GuoweiWang27/Teardown" target="_blank" rel="noopener noreferrer">
@@ -1299,14 +1327,14 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
       <a class="netcard reveal" href="https://lab.guoweiwang.com/" target="_blank" rel="noopener noreferrer">
         <p class="netcard__kind">Research Demo</p>
         <h3 class="netcard__name">GlyUp</h3>
-        <p class="netcard__desc">Interactive showcase of the Pt&ndash;Fe/CeO&#8322; catalyst experiments behind my first-author glycerol oxidation paper.</p>
+        <p class="netcard__desc">Interactive showcase of the Pt&ndash;Fe/CeO&#8322; catalyst experiments behind my first-author glycerol oxidation research.</p>
         <p class="netcard__url">lab.guoweiwang.com <span aria-hidden="true">&rarr;</span></p>
       </a>
 
       <a class="netcard reveal reveal-d1" href="https://chemai101.guoweiwang.com/" target="_blank" rel="noopener noreferrer">
         <p class="netcard__kind">AI Tool</p>
-        <h3 class="netcard__name">ChemAI Pro</h3>
-        <p class="netcard__desc">A DeepSeek-powered chemistry calculator that doesn't just compute &mdash; it explains the reaction, step by step.</p>
+        <h3 class="netcard__name">ChemAI 101</h3>
+        <p class="netcard__desc">A DeepSeek-powered chemistry learning tool that doesn't just compute &mdash; it explains the reaction, step by step.</p>
         <p class="netcard__url">chemai101.guoweiwang.com <span aria-hidden="true">&rarr;</span></p>
       </a>
 
@@ -1334,7 +1362,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
       <a class="netcard reveal reveal-d2" href="https://www.youtube.com/watch?v=DwX1_EKxOBU" target="_blank" rel="noopener noreferrer">
         <p class="netcard__kind">Film</p>
         <h3 class="netcard__name">The Solar Shepherd</h3>
-        <p class="netcard__desc">GENIUS Olympiad Gold&ndash;winning short film on agrivoltaics in the Mu Us Desert &middot; 5:56.</p>
+        <p class="netcard__desc">GENIUS Honorable Mention short film on agrivoltaics in the Tengger Desert &middot; 5:56.</p>
         <p class="netcard__url">youtube.com <span aria-hidden="true">&rarr;</span></p>
       </a>
 
@@ -1354,19 +1382,15 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
     <div class="reveal">
       <p class="chapter__label" style="text-align:center;">Let's Connect</p>
       <h2 class="contact__title">Always curious. Always building.</h2>
-      <p class="contact__desc">Interested in research collaboration, science communication, or just a conversation about catalysts? I'd love to hear from you.</p>
+      <p class="contact__desc">Interested in research collaboration, science communication, or just a conversation about catalysts? GitHub is the fastest way to reach me &mdash; or say hi through any live project above.</p>
       <div class="contact__links">
-        <a href="mailto:TODO@example.com" class="contact__link" data-todo="Contact email" aria-disabled="true">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          Email
-        </a>
         <a href="https://github.com/GuoweiWang27" target="_blank" rel="noopener noreferrer" class="contact__link">
           <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
           GitHub
         </a>
-        <a href="#TODO-linkedin" class="contact__link" data-todo="LinkedIn profile" aria-disabled="true">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
+        <a href="https://www.youtube.com/watch?v=DwX1_EKxOBU" target="_blank" rel="noopener noreferrer" class="contact__link">
+          <svg viewBox="0 0 24 24"><path d="M23 7.6s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4.1 12 4.1 12 4.1s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S.8 9.5.8 11.4V13c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.6c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.3 3.3-6.3 3.4z"/></svg>
+          YouTube
         </a>
       </div>
     </div>
@@ -1375,7 +1399,7 @@ section[id] { scroll-margin-top: calc(var(--nav-height) + 1rem); }
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p class="footer__text">&copy; 2026 Guowei Wang. Designed as a <span>catalyst</span> for conversation.</p>
+  <p class="footer__text">&copy; <span id="copyrightYear">2026</span> Guowei Wang. Designed as a <span>catalyst</span> for conversation.</p>
   <p class="footer__text" style="margin-top:0.4rem;font-family:var(--font-mono);font-size:0.6875rem;letter-spacing:0.02em;">
     <a href="https://photo.guoweiwang.com/" target="_blank" rel="noopener noreferrer">photo.</a> &middot;
     <a href="https://lab.guoweiwang.com/" target="_blank" rel="noopener noreferrer">glyup.</a> &middot;
@@ -1397,6 +1421,9 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 const updateNavShadow = () => nav.classList.toggle('scrolled', window.scrollY > 50);
 window.addEventListener('scroll', updateNavShadow, { passive: true });
 updateNavShadow();
+
+const copyrightYear = document.getElementById('copyrightYear');
+if (copyrightYear) copyrightYear.textContent = String(new Date().getFullYear());
 
 if (reduceMotion) {
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
