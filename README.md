@@ -4,7 +4,7 @@
 
 - GitHub：`https://github.com/GuoweiWang27/guoweiwang.com`
 - 线上（GitHub Pages 预览通道）：`https://guoweiwang27.github.io/guoweiwang.com/`
-- 生产地址（待 Vercel 接管根域）：`https://guoweiwang.com`
+- 生产地址（Vercel 已于 2026-08-23 接管根域与 www）：`https://guoweiwang.com`
 
 ## 当前版本
 
@@ -37,8 +37,7 @@ python3 -m http.server 4173
 
 ## 部署
 
-- 现阶段：GitHub Pages 从 `main` 分支根目录发布，push 即上线（约 1 分钟生效）。
-- 目标状态：Vercel 导入本仓库接管 `guoweiwang.com` 根域 + www，Pages 预览通道保留。
+- 现阶段：Vercel 接管 `guoweiwang.com` 根域 + www，Git push 自动部署；GitHub Pages 仅作预览通道。
   操作步骤见 `/Users/yimu/Documents/Guowei/Engineering/docs/maintenance-guide.md`。
 
 ## 来源

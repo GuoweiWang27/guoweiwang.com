@@ -48,7 +48,8 @@
 | The Solar Shepherd | https://www.youtube.com/watch?v=DwX1_EKxOBU | Film |
 | Start at GitHub | https://github.com/GuoweiWang27 | Open Source（CTA 卡） |
 
-**明确不展示：** Teardown 网页版卡片、BatteryChem-AI-Web 仓库行（以 Web App 卡片代替）、ChemAI 原型仓库、my-car-game、math.guoweiwang.com。
+**明确不展示：** BatteryChem-AI-Web 仓库行（以 Web App 卡片代替）、ChemAI 原型仓库、my-car-game、math.guoweiwang.com。
+> 更新（2026-08-25）：Teardown 于 2026-08-23 启用独立子域 `teardown.guoweiwang.com` 后，按最新状态加入产品卡（现为 7 张卡），本节原"不展示 Teardown 卡"结论作废。
 
 ## 4. GitHub 仓库公开/私有审计（建议，待主人拍板）
 
